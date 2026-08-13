@@ -1,0 +1,26 @@
+┌──(kali㉿kali)-[~]
+└─$ nmap -sV -sC -p- 10.64.184.14
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-13 21:05 -0400
+Nmap scan report for 10.64.184.14
+Host is up (0.16s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 53:46:88:44:38:77:d9:58:3d:8c:59:d5:13:f4:42:56 (ECDSA)
+|_  256 ab:a9:75:d8:17:63:20:5b:5e:54:6f:9a:93:cb:17:ff (ED25519)
+80/tcp   open  http    Apache httpd 2.4.58 ((Ubuntu))
+|_http-server-header: Apache/2.4.58 (Ubuntu)
+|_http-title: RecruitX - Home
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+3306/tcp open  mysql   MySQL (unauthorized)
+8080/tcp open  http    Apache httpd 2.4.58 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+|_http-server-header: Apache/2.4.58 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 683.70 seconds
